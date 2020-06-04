@@ -1,6 +1,9 @@
-FROM openjdk:11-jre-slim
+FROM sonarsource/sonar-scanner-cli:4.3
 
-RUN apt update
+USER root
+
+RUN apt-get update
+
 RUN apt-get install -y wget zip xz-utils
 
 RUN mkdir /usr/share/sonar-tools

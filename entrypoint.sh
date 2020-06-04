@@ -1,9 +1,10 @@
 #!/bin/bash
 
+set -e
+
 sonar-scanner \
     -Dsonar.host.url=${INPUT_HOST} \
     -Dsonar.login=${INPUT_LOGIN} \
-    -Dsonar.projectKey=${PWD##*/} \
     -Dsonar.projectBaseDir=${INPUT_PROJECTBASEDIR} \
     -Dsonar.projectKey=${INPUT_PROJECTNAME} \
     -Dsonar.projectName=${INPUT_PROJECTNAME} \

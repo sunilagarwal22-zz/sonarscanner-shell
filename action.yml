@@ -1,0 +1,23 @@
+name: 'SonarQube Scan'
+description: 'Scan your shell (bash scripts), python, groovy, etc. code with Sonar Scanner to detect bugs, vulnerabilities and code smells.'
+author: 'Sunil Agarwal'
+branding:
+  icon: 'check'
+  color: 'green'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+inputs:
+  host:
+    description: 'SonarQube server URL'
+    required: true
+  projectName:
+    description: 'Project Name'
+    required: true
+  projectBaseDir:
+    description: 'Set the sonar.projectBaseDir analysis property'
+    required: false
+    default: '.'
+  login:
+    description: 'Authentication token of a SonarQube user'
+    required: true

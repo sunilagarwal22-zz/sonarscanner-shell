@@ -2,10 +2,11 @@
 
 set -e
 
+echo -e "Called"
+
 sonar-scanner \
     -Dsonar.host.url=${INPUT_HOST} \
     -Dsonar.login=${INPUT_LOGIN} \
-    -Dsonar.projectBaseDir=${INPUT_PROJECTBASEDIR} \
     -Dsonar.projectKey=${INPUT_PROJECTNAME} \
     -Dsonar.projectName=${INPUT_PROJECTNAME} \
     -Dsonar.sources=. \

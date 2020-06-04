@@ -1,0 +1,1 @@
+# sonarscanner-shell
